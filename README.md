@@ -1,12 +1,27 @@
-# Guest-Book-Sinatra
+Hello!
+====
 
+This is a demonstrator for [Sinatra](http://www.sinatrarb.com/) and [Twitter Bootstrap](http://getbootstrap.com/).
 
-git clone https://github.com/rubyschool-us/sinatra-bootstrap-clean.git
+Use it as a boilerplate to start your own apps.
 
-    edit GEMFILE                     # gem 'sinatra-contrib' # To work reloader
+Go!
+===
 
-    bundle install                   # To install sinatra bundle
+Download and run sinatra-bootstrap:
 
-    bundle update                    # install gems --> bundle
+    git clone https://github.com/bootstrap-ruby/sinatra-bootstrap
 
-    start bundle exec ruby app.rb    # To run the sample cmd window
+    cd sinatra-bootstrap
+    
+    GEMFILE edit, add gem 'sinatra-contrib'
+
+    bundle install             # To install sinatra
+
+    bundle exec ruby app.rb    # To run the sample
+
+Then open [http://localhost:4567/](http://localhost:4567/)
+
+What's next?
+============
+- Try the rerun gem to restart Sinatra automatically when you change source files: https://github.com/alexch/rerun
