@@ -1,4 +1,46 @@
-<form action='/login/attempt' method='post' class="form-inline well">
+﻿
+
+
+
+
+<!-- <form action='/login/attempt' method='post' class="form-inline well">
   <input type="text" name='username' placeholder="username" autofocus>
   <input class="btn primary" type='submit' value='log in'>
 </form>
+ -->
+
+<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Вход в административную панель</h5>
+						
+						<form action="/login/attempt" method="POST">
+						  
+						  <div class="form-group">
+						  	<label for="myText">Логин</label>
+						  	<input  name='username' id="myText"class="form-control"  type="text" placeholder="username" autofocus></input>
+						  </div>
+
+						  <div class="form-group">
+						  	<label for="myText">Пароль</label>
+						  	<input  id="myText"class="form-control"  type="password"></input>
+						  </div>
+
+						  <div class="form-group">
+						  	<br>
+						  	<input class="btn primary" type="submit"  value='log in'>
+						  </div>
+
+						  
+
+						</form>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-6"></div>
+		</div>
+</div>	
+

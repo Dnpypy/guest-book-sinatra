@@ -1,35 +1,57 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Гостевая книга</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 
-<form action="/contacts" method="POST">
+<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Оставьте свое сообщение</h5>
+						<%= @alert_message %>
+						<%= @alert_success %>
+						<form action="/contacts" method="POST">
+						  
+						  <div class="form-group">
+						  	<label for="myText">Имя</label>
+						  	<input name="login" id="myText"class="form-control"  type="text"></input>
+						  </div>
 
-	
-	<!-- <div class="form-group"> -->
-	<div class="row">
-		<div class="col">
-			<label>Введите логин</label>
-			<input type="text"  class="form-control" name="user" placeholder="First name">
+
+						  <div class="form-group">
+						  	<label for="myText">Почта</label>
+						  	<input name="mail" id="myText"class="form-control"  type="email"></input>
+						  </div>
+							<!-- 
+					 	  <div class="form-group">
+						  	<label for="myText">Когда Вас ждать?</label>
+						  	<input name="datetime" id="myText"class="form-control"  type="datetime"></input>
+						  </div> -->
+
+
+					 	  <div class="form-group">
+						  	<label for="myText">Оставьте ваше сообщение:</label>
+						  	<!-- <input name="datetime" id="myText"class="form-control"  type="datetime"></input> -->
+						  	<textarea name="message" id="" cols="55" rows="5"></textarea>
+						  </div>
+
+						  <div class="form-group">
+						  	<input type="submit">
+						  </div>
+											  
+
+						</form>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-6"></div>
 		</div>
-	</div>
-	<!-- </div> -->
-
-	
-
-
-	<div class="form-group">
-	<label>Введите почту</label>
-	<input type="email" class="form-control"    name="mail">
-	</div>
-
-	<input type="datetime" class="form-control" name="datetime">
-
-	<input type="submit" >
-
-</form>
+</div>	
 
 
 </body>
