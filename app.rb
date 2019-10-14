@@ -37,7 +37,8 @@ get '/' do
 end
 
 get '/login/form' do
-  erb :login_form
+    @user_ids = [1]
+    erb :login_form, layout: :message
 end
 
 post '/login/attempt' do
@@ -57,7 +58,8 @@ end
 
 
 get "/about" do
-  erb "OK"
+    @user_ids = [1]
+    erb "OK", layout: :message
 end
 
 get "/something" do
@@ -133,9 +135,9 @@ post "/admin" do
                 @logfile = line.readlines
             end
 
-            @user_ids = [1,2,3,4,5,6,7,8,9]
+            @user_ids = [1,2]
 
-            erb :admin_panel
+            erb :admin_panel, layout: :message
     else
           
         erb :admin

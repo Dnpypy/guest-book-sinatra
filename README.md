@@ -37,6 +37,8 @@ What's next?
     
     Creating 2 conditions app.rb and create bootstrap table admin_panel.
     
+    Add layout: :message, add gem pry debagger.
+
     
 
 
