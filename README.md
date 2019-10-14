@@ -27,16 +27,15 @@ What's next?
 - Try the rerun gem to restart Sinatra automatically when you change source files: https://github.com/alexch/rerun
 
 
-    Добавить в /views(представления) 3 файла admin.erb, contacts.erb, message.erb.
+    Add 3 files admin.erb, contacts.erb, message.erb to / views.
     
-    Добавить в admin.erb(форму входа логин и пароль) и contacts.erb(форму имя, почта, собщения).
+    Add to admin.erb (login form login and password) and contacts.erb (form name, mail, messages).
 
-    Добавить пост обработчик admin.erb для перехода в admin_panel.erb.
+    Add a post handler admin.erb to go to admin_panel.erb.
 
-    Создать папку public и файл users.txt. 
+    Create a public folder and a users.txt file.
 
-    Добавить условие(пустая строка и количество символов) в пост обработчик contacts.erb и запись в файл users.txt.
-
+    Add a condition (empty string and number of characters) to the contacts.erb handler post and write to users.txt file.
     
 
  
