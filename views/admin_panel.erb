@@ -1,3 +1,14 @@
 ﻿
 
 <p>"Вы вошли в административную панель!"</p>
+<%= @proverka %>
+
+<p>		ADmin panellllll</p>
+
+
+<table class="table table-striped">
+	<% @logfile.each do |line| %>
+	<tr><td><%= line %></td></tr>
+	<% end %>
+</table>
+

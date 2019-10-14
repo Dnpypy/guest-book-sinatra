@@ -12,15 +12,16 @@
 						<h5 class="card-title">Вход в административную панель</h5>
 						
 						<form action="/admin" method="POST">
-						  
+						  <%= @alert_admin %>
+						  <%= @check_numbers %>
 						  <div class="form-group">
 						  	<label for="myText">Логин</label>
-						  	<input  id="myText"class="form-control"  type="text"></input>
+						  	<input  name="login" id="myText" class="form-control" type="text"></input>
 						  </div>
 
 						  <div class="form-group">
 						  	<label for="myText">Пароль</label>
-						  	<input  id="myText"class="form-control"  type="password"></input>
+						  	<input  name="pass" id="myText" class="form-control"  type="password"></input>
 						  </div>
 
 						  <div class="form-group">

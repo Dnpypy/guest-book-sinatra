@@ -75,19 +75,20 @@ post "/contacts" do
 
     @username_limit = 25;
     @email_limit    = 35;
-    @message_limit  = 200;
+    @message_limit  = 300;
 
     if  ((@login.length   > 0) && (@login.length   <= @username_limit)) &&
         ((@mail.length    > 0) && (@mail.length    <= @email_limit))    &&
         ((@message.length > 0) && (@message.length <= @message_limit))  
 
         File.open("./public/users.txt", "a") do |file|
-            file.puts @login
-            file.puts @mail
-            file.puts @message
+            file.print   "user: #{@login} "
+            file.print   "mail: #{@mail} "
+            file.puts    "time: #{Time.now} "
+            file.puts "message: #{@message}"
         end
 
-        @alert_success = "Заявка оставлена!"
+        @alert_success = "Сообщение записано!"
     
     else 
         
@@ -98,39 +99,49 @@ post "/contacts" do
     erb :contacts
 end
 
-# end
-
- # # проверка на пустую строку
-  # if @login == "" # ||   
-  #   @alert_message = "<p class='alert alert-danger' role='alert'>Пустая строка!!!</p>"
-  #   # @check_mail = 
-  #   erb :admin
-  # elsif @pass == ""
-  #   @alert_message_2 = "<p class='alert alert-danger' role='alert'>Пустая строка!!!</p>"
-  #   erb :admin
-  
-  # # проверка на превышение лимита букв
-  # elsif @login.length >= @username_limit 
-  #   @alert_message_3 = "<p class='alert alert-danger' role='alert'>Превышен лимит букв!!!</p>"
-  #   erb :admin
-  # elsif @pass.length >= @pass_limit
-  #   @alert_message_4 = "<p class='alert alert-danger' role='alert'>Превышен лимит букв!!!</p>"
-  #   erb :admin
-  # else 
-  #   @inner = "<p class='alert alert-success' role='alert'>Вы вошли!!!</p>"
-  # end
-
-
-  # redirect to "/contacts"
-# end
-
 get "/admin" do
   erb :admin
 end
 
+
+
 post "/admin" do
-  erb :admin_panel
+
+    @login = params[:login]    
+    @pass  = params[:pass]   
+
+    @login_limit   = 25
+    @pass_limit    = 35
+
+
+    if  ((@login.length   > 0) && (@login.length   <= @login_limit)) &&
+        ((@pass.length    > 0) && (@pass.length    <= @pass_limit))  && 
+    
+        @check_numbers = "success check_numbers"  
+    
+    else 
+    
+        @alert_admin = "Неправильный логин или пароль!!!"
+    
+    end
+
+    if @login == "1" && @pass == "1"
+            
+            File.open("./public/users.txt", "r") do |line|
+                @logfile = line.readlines
+            end
+
+            erb :admin_panel
+    else
+          
+        erb :admin
+        
+    end
+
 end
 
 
+get "/admin_panel" do
+    erb :admin_panel
+end
 
