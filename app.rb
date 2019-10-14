@@ -12,6 +12,7 @@ end
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
+require "pry"
 
 configure do
   enable :sessions
@@ -110,6 +111,7 @@ post "/admin" do
     @login = params[:login]    
     @pass  = params[:pass]   
 
+    # binding.pry
     @login_limit   = 25
     @pass_limit    = 35
 
@@ -131,6 +133,8 @@ post "/admin" do
                 @logfile = line.readlines
             end
 
+            @user_ids = [1,2,3,4,5,6,7,8,9]
+
             erb :admin_panel
     else
           
@@ -144,4 +148,7 @@ end
 get "/admin_panel" do
     erb :admin_panel
 end
+
+
+
 
