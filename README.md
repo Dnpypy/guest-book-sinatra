@@ -25,7 +25,7 @@ Then open [http://localhost:4567/](http://localhost:4567/)
 What's next?
 ============
 
-    Add 3 files admin.erb, contacts.erb, message.erb to / views.
+    Add 4 files admin.erb, contacts.erb, message.erb, admin_panel.erb to / views.
     
     Add to admin.erb (login form login and password) and contacts.erb (form name, mail, messages).
 
@@ -35,7 +35,12 @@ What's next?
 
     Add a condition (empty string and number of characters) to the contacts.erb handler post and write to users.txt file.
     
+    Creating 2 conditions app.rb and create bootstrap table admin_panel.
+    
+    
 
+
+    
  
 
     
