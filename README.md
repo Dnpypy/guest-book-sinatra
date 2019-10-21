@@ -39,7 +39,7 @@ What's next?
     
     Add layout: :message, add gem pry debagger.
 
-    
+    Add edit app.rb check email regular, add conctacts.erb value="" 
 
 
     

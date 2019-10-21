@@ -6,3 +6,71 @@ user: Sasha mail: admin@admin.ru time: 2019-10-14 11:28:32 +0300
 message: But many novice webmasters do not know how to implement a guestbook or forum on their own. Some webmasters resort to the use of special Internet services that provide a ready-made product in the form of guest or forums located on the website of these services
 user: asfasf mail: sdgsg@sdgsdg.ru time: 2019-10-14 17:03:18 +0300 
 message: asfasfffffffffffffffffffsf
+user: admin mail: sdgsg@sdgsdg.ru time: 2019-10-18 16:39:11 +0300 
+message: sdgsdgsdg
+user: admin mail: den@den.ru time: 2019-10-18 16:43:34 +0300 
+message: sdgsdgsdg
+user: admin mail: admin@admin.ru time: 2019-10-18 16:45:11 +0300 
+message: dfhdfh
+user: admin mail: safasf time: 2019-10-18 16:45:37 +0300 
+message: asfasfaf
+user: Denis mail: admin@admin.ru time: 2019-10-18 17:05:29 +0300 
+message: asfasf
+user: Sasha mail: den@den.ru time: 2019-10-18 17:06:06 +0300 
+message: Hello!!!!!!!!!!!!!!!
+user: Denis mail: sdgsdg@gmail.com time: 2019-10-18 17:06:19 +0300 
+message: HJJEHEHEHEHEHHEHE
+user: Denis mail: sdgsdg@gmail.com time: 2019-10-18 17:06:35 +0300 
+message: sdsdg
+user: Kirill mail: sdgsg@mail.ru time: 2019-10-18 17:06:52 +0300 
+message: Hello!!!!!!!!!!!
+user: Denis mail: den@den.ru time: 2019-10-18 17:27:23 +0300 
+message: Hello my friend???
+user: Denis mail: admin@admin.ru time: 2019-10-18 17:28:46 +0300 
+message: Hello my friend!
+user: Denis mail: admin@admin.ru time: 2019-10-18 17:29:35 +0300 
+message: Hello my friend!!!!
+user: Denis mail: den@den.ru time: 2019-10-18 17:35:00 +0300 
+message: If a block is given, it is passed the name of the new current directory, and the block is executed with that as the current directory. The original working directory is restored when the block exits. The return value of chdir
+user: Denis mail: den@den.ru time: 2019-10-18 17:35:04 +0300 
+message: If a block is given, it is passed the name of the new current directory, and the block is executed with that as the current directory. The original working directory is restored when the block exits. The return value of chdir
+user: admin mail: admin@admin.ru time: 2019-10-18 17:35:32 +0300 
+user: admin mail: admin@admin.ru time: 2019-10-18 17:35:39 +0300 
+user: admin mail: admin@admin.ru time: 2019-10-18 17:35:56 +0300 
+message: Returns an array containing all of the filenames in the given directory. Will raise a SystemCallError if the named directory doesn't exist.
+
+The optional encoding keyword argument specifies the encoding of th
+user: Denis mail: admin@admin.ru time: 2019-10-18 17:45:00 +0300 
+message: Calls the block once for each entry in the named directory, passing the filename of each entry as a parameter to the block.
+
+If no block is given, an enumerator is returned instead.
+user: Kirill mail: den@den.ru time: 2019-10-18 17:47:35 +0300 
+message: Returns the Symbol corresponding to str, creating the symbol if it did not previously exist. See Symbol#id2name.
+user: admin mail: den@den.ru time: 2019-10-18 17:48:12 +0300 
+message: Returns the Symbol corresponding to str, creating the symbol if it did not previously exist. See Symbol#id2name.
+user: Sasha mail: den@den.ru time: 2019-10-18 17:57:03 +0300 
+message: In these three cases, if an index is negative, it is counted from the end of the string. For the start and range cases the starting index is just before a 
+user: admin mail: den@den.ru time: 2019-10-18 18:26:26 +0300 
+message: asfasf
+user: Denis mail: den@den.ru time: 2019-10-18 18:30:06 +0300 
+message: asfasfasf
+user: Denis mail: den@den.ru time: 2019-10-18 18:31:01 +0300 
+message: er and an index matching the string's size. Additionally, an empty string is returned when the starting index for a character range is at the end of the string.
+user: admin mail: admin@admin.ru time: 2019-10-18 18:37:04 +0300 
+message: gsdgsgd
+user: Denis mail: den@den.ru time: 2019-10-18 18:39:25 +0300 
+message: Hello!!!!
+user: admin mail: admin@admin.ru time: 2019-10-18 18:42:12 +0300 
+message: asfasf
+user: admin mail: admin@admin.ru time: 2019-10-18 18:47:57 +0300 
+message: 
+user: admin mail: admin@admin.ru time: 2019-10-18 18:48:05 +0300 
+message: 
+user: admin mail: admin@admin.ru time: 2019-10-18 18:51:00 +0300 
+message: 
+user: admin mail: admin@admin.ru time: 2019-10-18 18:52:11 +0300 
+message: Hello
+user: admin mail: den@mail.ru time: 2019-10-18 18:52:32 +0300 
+message: AFSFASF
+user: Kirill mail: sdgsg@sdgsdg.ru time: 2019-10-18 18:57:51 +0300 
+message: HH

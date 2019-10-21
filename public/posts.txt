@@ -1,0 +1,19 @@
+18.10.2019 17:35;Denis;If a block is given, it is passed the name of the new current directory, and the block is executed with that as the current directory. The original working directory is restored when the block exits. The return value of chdir
+18.10.2019 17:35;Denis;If a block is given, it is passed the name of the new current directory, and the block is executed with that as the current directory. The original working directory is restored when the block exits. The return value of chdir
+18.10.2019 17:35;admin;Returns an array containing all of the filenames in the given directory. Will raise a SystemCallError if the named directory doesn't exist.<br /><br />The optional encoding keyword argument specifies the encoding of th
+18.10.2019 17:45;Denis;Calls the block once for each entry in the named directory, passing the filename of each entry as a parameter to the block.<br /><br />If no block is given, an enumerator is returned instead.
+18.10.2019 17:47;Kirill;Returns the Symbol corresponding to str, creating the symbol if it did not previously exist. See Symbol#id2name.
+18.10.2019 17:48;admin;Returns the Symbol corresponding to str, creating the symbol if it did not previously exist. See Symbol#id2name.
+18.10.2019 17:57;Sasha;In these three cases, if an index is negative, it is counted from the end of the string. For the start and range cases the starting index is just before a 
+18.10.2019 18:26;admin;asfasf
+18.10.2019 18:30;Denis;asfasfasf
+18.10.2019 18:31;Denis;er and an index matching the string's size. Additionally, an empty string is returned when the starting index for a character range is at the end of the string.
+18.10.2019 18:37;admin;gsdgsgd
+18.10.2019 18:39;Denis;Hello!!!!
+18.10.2019 18:42;admin;asfasf
+18.10.2019 18:47;admin;
+18.10.2019 18:48;admin;
+18.10.2019 18:51;admin;
+18.10.2019 18:52;admin;Hello
+18.10.2019 18:52;admin;AFSFASF
+18.10.2019 18:57;Kirill;HH

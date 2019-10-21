@@ -63,11 +63,13 @@ get "/about" do
 end
 
 get "/something" do
-  erb "OK"
+    erb "OK"
 end
 
 get "/contacts" do
-  erb :contacts
+    # переменной присваиваем метод результат метода read_posts_from_file
+    @message_board = read_posts_from_file
+    erb :contacts
 end
 
 post "/contacts" do
@@ -80,33 +82,132 @@ post "/contacts" do
     @email_limit    = 35;
     @message_limit  = 300;
 
+    # 1. Сначала проходим на пустоту форму, 
+    # 2. Далее проверям почту регуляркой, 
+    # 3. Далее на избыток символов
+    
+    
+    # хэш с ошибками, сюда можно добавить любой ключ с ошибкой
+    error_hash =     {    
+                     :login   => "Введите имя", 
+                      :mail   => "Введите почту @", 
+                     :message => "Введите сообщение"
+                    }
+    
+    error_hash.each do |key, value|
+            
+        # проверям все параметры на пустые строки
+        if params[key] == ""
+            
+            @error = error_hash[key]
+            erb :contacts
+        end
+    end
+
+
+    # проверяем поля на избыток символов если много то ошибка
     if  ((@login.length   > 0) && (@login.length   <= @username_limit)) &&
         ((@mail.length    > 0) && (@mail.length    <= @email_limit))    &&
         ((@message.length > 0) && (@message.length <= @message_limit))  
 
-        File.open("./public/users.txt", "a") do |file|
+        # if params[key].length > 0 && params[key].length <= 
+
+        # регулярное выражение
+        email_regexp = /^[a-z\d_+.\-]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+$/i
+
+        # проверяем email по регулярке
+        if @mail.match(email_regexp)
+
+           # если все ок, то записываем в файл
+           File.open("./public/users.txt", "a") do |file|
             file.print   "user: #{@login} "
             file.print   "mail: #{@mail} "
             file.puts    "time: #{Time.now} "
             file.puts "message: #{@message}"
-        end
+           end
 
-        @alert_success = "Сообщение записано!"
-    
+            # Т.е после каждой абзаца когда мы закоончили метод gsub,
+            # меняет все \r\n на тэг отступ "<br />"
+            @message.gsub!("\r\n", "<br />")
+
+           # Записываем логин и сообщение в метод post_to_file
+           post_to_file @login, @message
+           @alert_success = "<div class='alert alert-success'>Сообщение записано!</div>"
+           
+           # для обновления страницы и обновления постов
+           redirect "/contacts"
+        
+        else
+          
+            @mail_fail = "<div class='alert alert-danger'>Это не email!!</div>"
+            erb :contacts
+
+        end  # <<< if @mail.match
+
     else 
         
-        @alert_message =  "Ошибка!!!<br>Не все данные введенны, либо в одном из полей формы слишком символов."
-    
-    end
+        @alert_message =  "<div class='alert alert-danger'>Ошибка!!!<br>В одном из полей формы слишком много символов.</div>"
+        erb :contacts
 
-    erb :contacts
+    end # <<< if many character
+
+       
+end # <<< "/contacts" do
+
+# в методе post_to_file мы записываем в файл время, автора и контент, что пишем в абзаце.
+def post_to_file author, content
+  File.open('./public/posts.txt', 'a') do |file|
+    temp_time = Time.new
+    file.print "#{temp_time.day}.#{temp_time.month}.#{temp_time.year} #{temp_time.hour}:#{temp_time.min};"
+    file.print "#{author};"
+    file.puts "#{content}\n"
+  end
 end
+
+
+# loop do <<< try loop close
+
+# Что делает метод, проверяет наличие файла, читает его и записывает в вывод html
+def read_posts_from_file
+  
+  @board = ""    # создаем строку @board
+  @iterator = 0  # создаем строку @iterator
+
+  # Оператор unless проверяет отрицание, пока 'posts.txt' не пустой?(отрицание)
+  unless File.readlines('./public/posts.txt').empty?    # метод .readlines весь файл читаем
+    File.readlines('./public/posts.txt').each do |line| # каждую строку (line проходим)
+      line.split(';').each do |element| # .split Делит строку str на подстроки по разделителю ;
+        #  ';' - разделитель в файле
+        case @iterator
+          when 0  # когда 0
+            @board << "Date: "
+          when 1
+            @board << "Author: "
+          when 2
+            @board << "Content: "
+          when 3
+            @board << "<hr> Date: "
+        end
+        
+        # в конце записывается счетчик element
+        @board << "#{element}<br />"  
+        
+        if @iterator <= 2 
+          @iterator += 1
+        else
+          @iterator = 1
+        end
+
+      end
+    end
+  end
+  @board # в конце передает что было записано
+end
+# end  <<< try loop close
 
 get "/admin" do
   erb :admin
 end
-
-
 
 post "/admin" do
 
